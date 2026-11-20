@@ -1,0 +1,35 @@
+{
+  "name": "citecheck",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Inspect any domain for LLM citation readiness and generate llms.txt and JSON-LD fixes.",
+  "type": "module",
+  "bin": {
+    "citecheck": "./dist/cli.js",
+    "citecheck-mcp": "./dist/mcp.js"
+  },
+  "exports": {
+    ".": "./dist/scanner.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "cli": "node dist/cli.js",
+    "mcp": "node dist/mcp.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
